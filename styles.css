@@ -1,0 +1,230 @@
+/* ============================================
+   Chris Hammers - GitHub Portfolio
+   Professional, clean design for iOS/mobile dev
+   ============================================ */
+
+:root {
+    /* Apple-inspired color palette */
+    --color-bg: #f5f5f7;
+    --color-bg-elevated: #ffffff;
+    --color-bg-card: #ffffff;
+    --color-text: #1d1d1f;
+    --color-text-muted: #6e6e73;
+    --color-accent: #007aff;
+    --color-accent-hover: #0051d5;
+    --color-border: #d2d2d7;
+    --color-shadow: rgba(0, 0, 0, 0.08);
+    --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+    --font-mono: ui-monospace, "SF Mono", "Menlo", monospace;
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+    --radius: 8px;
+    --radius-lg: 12px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    min-height: 100vh;
+}
+
+/* Header */
+.header {
+    padding: var(--space-xl) var(--space-lg);
+    text-align: center;
+    background: var(--color-bg-elevated);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+.tagline {
+    margin: var(--space-xs) 0 0;
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+}
+
+/* Navigation */
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.nav ul {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-lg);
+    margin: 0;
+    padding: var(--space-sm) var(--space-lg);
+    list-style: none;
+}
+
+.nav a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius);
+    transition: color 0.2s, background-color 0.2s;
+}
+
+.nav a:hover {
+    color: var(--color-accent);
+    background-color: rgba(0, 122, 255, 0.08);
+}
+
+/* Main content */
+.content {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: var(--space-xl) var(--space-lg);
+}
+
+.section {
+    margin-bottom: var(--space-xl);
+}
+
+.section h2 {
+    margin: 0 0 var(--space-md);
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--color-text);
+    padding-bottom: var(--space-xs);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.section p {
+    margin: 0;
+    color: var(--color-text-muted);
+}
+
+#about p {
+    font-size: 1.05rem;
+}
+
+/* Repo cards */
+.repo-grid {
+    display: grid;
+    gap: var(--space-md);
+}
+
+.repo {
+    padding: var(--space-lg);
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 2px 8px var(--color-shadow);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.repo:hover {
+    border-color: var(--color-accent);
+    box-shadow: 0 4px 16px var(--color-shadow);
+}
+
+.repo h3 {
+    margin: 0 0 var(--space-sm);
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.repo p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+}
+
+.repo-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    margin: calc(var(--space-lg) * -1);
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+}
+
+.repo-link:hover {
+    color: inherit;
+}
+
+.repo-link-text {
+    display: inline-block;
+    margin-top: var(--space-sm);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-accent);
+}
+
+.repo-link:hover .repo-link-text {
+    color: var(--color-accent-hover);
+}
+
+/* Footer */
+.footer {
+    margin-top: var(--space-xl);
+    padding: var(--space-lg);
+    text-align: center;
+    border-top: 1px solid var(--color-border);
+    background: var(--color-bg-elevated);
+}
+
+#contact p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+}
+
+#contact a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+#contact a:hover {
+    color: var(--color-accent-hover);
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .nav ul {
+        gap: var(--space-sm);
+        padding: var(--space-sm);
+    }
+
+    .content {
+        padding: var(--space-lg) var(--space-md);
+    }
+
+    .repo {
+        padding: var(--space-md);
+    }
+}

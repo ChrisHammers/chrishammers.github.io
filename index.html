@@ -3,54 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chris Hammers Personal Github Website</title>
+    <title>Chris Hammers | GitHub Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Non-semantic website -->
-    <!-- Header Section: Update this section to use semantic tags -->
-    <div class="header">
-        <h1>Welcome to My GitHub</h1>
-    </div>
+    <header class="header">
+        <h1>Welcome to Chris Hammers's GitHub</h1>
+        <p class="tagline">iOS &amp; Mobile Development</p>
+    </header>
 
-    <!-- Navigation Section: Update this section to use semantic tags -->
-    <div class="nav">
+    <nav class="nav">
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#repos">Repos</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-    </div>
+    </nav>
 
-    <!-- Main Content Section: Update this section to use semantic tags -->
-    <div class="content">
-        <!-- About Section: Replace with semantic structure -->
-        <div id="about">
+    <main class="content">
+        <section id="about" class="section">
             <h2>About Me</h2>
-            <p>I started coding by self learning Visual Basic at the age of 10. My love for software only grew from there. Spent my college years learning theory at WPI, including a year of Grad School there before I started my career at Savant Systems. At Savant I worked mostly in Objective-C and C while I worked on both Host/Runtime side and the Setup/Design portion of our software. After helping design the User Interface direction I started working on iOS apps using Swift.</p>
-        </div>
+            <p>I started coding by self learning Visual Basic at the age of 10. My love for software only grew from there, learning HTML, Java and C in my personal time. Spent my college years learning theory at WPI, including a year of Grad School there before I started my career at Savant Systems. At Savant I worked mostly in Objective-C and C while I worked on both Host/Runtime side and the Setup/Design portion of our software. After helping design many User Interface's, I started working on iOS apps using Swift, UIKit and SwiftUI.</p>
+            <p>After Savant, I joined Barwave where we have a Social Media/Find your next bar app using SwiftUI with a complex integration of UIKits MapKit and SwiftUI pop-ups. My personal projects have mostly been SwiftUI, as have my freelance work (which of course will not be shown here). Recently, I have begun to learn newer HTML, CSS, JavaScript, and Android. Currently, leaning into AI to help me produce at a faster rate than I could type manually while learning the intricacies of prompt engineering.</p>
+        </section>
 
-        <!-- Articles Section: Replace with semantic structure -->
-        <div id="repos">
-            <h2>Featuerd Repos</h2>
+        <section id="repos" class="section">
+            <h2>Featured Repos</h2>
 
-            <!-- Individual Article: Replace with semantic tags -->
-            <div class="repo">
-                <h3>BarWave Burrito Challenge</h3>
-                <p>Work I did during the Intervierw process as BarWave. Simple app getting the local burritos using a "Locations" API.</p>
+            <div class="repo-grid">
+                <article class="repo">
+                    <a href="https://github.com/chrishammers/BarwaveChallenge" target="_blank" rel="noopener noreferrer" class="repo-link">
+                        <h3>BarWave Burrito Challenge</h3>
+                        <p>Work I did during the Interview process at BarWave. Simple app getting the local burritos using a "Locations" API.</p>
+                        <span class="repo-link-text">View on GitHub →</span>
+                    </a>
+                </article>
+                <article class="repo">
+                    <a href="https://github.com/HammersTechLLC/TierSystem" target="_blank" rel="noopener noreferrer" class="repo-link">
+                        <h3>Tier List</h3>
+                        <p>Tier List app I built with a twist, you can combine lists and then reorder that new list. Useful for Fantasy sports rankings or other sub-type breakdowns.</p>
+                        <span class="repo-link-text">View on GitHub →</span>
+                    </a>
+                </article>
+                <article class="repo">
+                    <a href="https://github.com/chrishammers/LicensePlateApp" target="_blank" rel="noopener noreferrer" class="repo-link">
+                        <h3>License Plate App</h3>
+                        <p>Classic License Plate game app, as my family and I play this on all our road trips. I prompted AI using Cursor (Plan, Build and Ask) and generally accepted what it provided to learn what can be done (minimal manual updates, would reprompt if issues found). I have improved my prompting style because of this experience. I am releasing this to the App Store and plan to make an Android versus the same way</p>
+                        <span class="repo-link-text">View on GitHub →</span>
+                    </a>
+                </article>
+                <article class="repo">
+                    <a href="https://github.com/chrishammers/RoutineChartApp" target="_blank" rel="noopener noreferrer" class="repo-link">
+                        <h3>Routine Chart  App</h3>
+                        <p>Routine Charts are helpful for children and even adults to get consistent with Routines. I wanted to make this a visually fun and allow customers to buy printouts so their kids aren't stuck to their screens. Minimal UI distractions a well. I am building this as both iOS and Android using Cursor (Plan, Build and Ask) but I am learning from my work on the License Plate App to improve my prompting.</p>
+                        <span class="repo-link-text">View on GitHub →</span>
+                    </a>
+                </article>
             </div>
-            <div class="repo">
-                <h3>Tier List</h3>
-                <p>Tier List app I built with a twist, you can combine list and then reorder that new list.  Useful for Fantasy sports rankings or other sub-type breakdowns.</p>
-            </div>
-        </div>
-    </div>
+        </section>
+    </main>
 
-    <!-- Footer Section: Update this section to use semantic tags -->
-    <div class="footer">
-        <div id="contact">
-            <p>Contact me at hammerstechllc+web@gmail.com</p>
-        </div>
-    </div>
+    <footer class="footer">
+        <section id="contact">
+            <p>Contact me at <a href="mailto:chrishammers+github@gmail.com">chrishammers+github@gmail.com</a></p>
+        </section>
+    </footer>
 </body>
 </html>
